@@ -1,0 +1,5 @@
+#dedicated namespace to Isolates MLflow and MinIO
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mlops-system

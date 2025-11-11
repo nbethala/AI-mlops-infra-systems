@@ -1,7 +1,7 @@
 AI/MLops Infrastucture Systems Project plan 
 ---
 
-Phase 1: Foundation & Framing 
+Phase 1: Foundation & Framing [x]
 - [ ] Create GitHub repo: `AI-mlops-infra-systems`
 - [ ] Add folder structure:
   - [ ] /docs
@@ -23,21 +23,21 @@ Phase 1: Foundation & Framing
 - [ ] Create `docs/architecture.png` (initial sketch)
 - [ ] Create `docs/screencast.md` with demo note
 
-Phase 2: Infrastructure Bootstrapping task-list
+Phase 2: Infrastructure Bootstrapping task-list []
 - [ ] Scaffold Terraform modules (local cluster first)
-  - [ ] Create `infra/terraform/main.tf` for K3s or Minikube
-  - [ ] Define provider, cluster resources, and storage backend
+  - [ ] Create `infra/terraform/main.tf` for AWS
+  - [ ] Define provider, cluster resources, and storage backend (EKS + S3 for DVC)
   - [ ] Add outputs for kubeconfig and endpoint
 
-- [ ] Add Kubernetes manifests
-  - [ ] MLflow tracking server
+- [ ] Add Kubernetes manifests 
+  - [x] MLflow tracking server
     - [ ] `infra/k8s/mlflow-deployment.yaml`
     - [ ] `infra/k8s/mlflow-service.yaml`
     - [ ] Backend store (PostgreSQL or SQLite)
-  - [ ] DVC-compatible storage (MinIO or S3)
+  - [x] DVC-compatible storage (MinIO or S3)
     - [ ] `infra/k8s/minio-deployment.yaml`
     - [ ] `infra/k8s/minio-service.yaml`
-    - [ ] Bucket config for DVC remote
+    - [x] Bucket config for DVC remote - See Readme-k8s.md
 
 - [ ] Set up GitHub Actions for CI/CD
   - [ ] Create `.github/workflows/deploy.yml`
