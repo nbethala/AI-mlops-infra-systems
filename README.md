@@ -47,7 +47,7 @@ A Modern, cloud-agnostic, end-to-end ML pipeline.
 terraform apply
 kubectl apply -f infra/k8s/
 make demo
-
+```
 
 ```
 ai-infra-pipeline/
