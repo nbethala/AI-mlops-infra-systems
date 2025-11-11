@@ -75,3 +75,4 @@ ai-infra-pipeline/
 └── examples/              # Recruiter-friendly demos
     ├── quickstart.md      # One-command reproducibility demo
     └── notebooks/         # Lightweight ML examples
+```
