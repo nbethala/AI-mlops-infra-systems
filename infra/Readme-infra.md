@@ -25,3 +25,17 @@ The infrastructure setup provisions:
 - IRSA (IAM Roles for Service Accounts) to allow Kubernetes pods to access AWS resources securely
 - Terraform Workspace - setup dev and production separately 
 
+### quickstart & quickstop :
+# === One-Command startdown ===
+```
+export AWS_ACCESS_KEY_ID=your-key
+export AWS_SECRET_ACCESS_KEY=your-secret
+
+make quickstart
+```
+
+# === One-Command Teardown ===
+ ```
+     make quickstop
+```
+

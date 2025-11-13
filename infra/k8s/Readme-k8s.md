@@ -65,3 +65,9 @@ export AWS_SECRET_ACCESS_KEY=your-secret
 make dvc-remote-init   # Sets up the remote
 make dvc-push          # Tracks and pushes data
 ```
+### setup SQLite for MLflow backend store
+ - Storage Strategy :
+     - SQLite .db file lives inside the MLflow pod
+     - Artifact metadata stored in .db
+     - Actual artifacts stored in S3 (provisioned via Terraform)
+     - Future enhancements - Add a PersistentVolumeClaim if you want to persist the .db across pod    restarts . Switch to PostgreSQL via Helm when scaling to multi-user or CI/CD pipelines

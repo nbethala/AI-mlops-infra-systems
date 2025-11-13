@@ -3,19 +3,8 @@ AI/MLops Infrastucture Systems Project plan
 
 Phase 1: Foundation & Framing [x]
 - [ ] Create GitHub repo: `AI-mlops-infra-systems`
-- [ ] Add folder structure:
-  - [ ] /docs
-  - [ ] /infra/terraform
-  - [ ] /infra/k8s
-  - [ ] /ml-pipeline
-  - [ ] /dvc
-  - [ ] /pipelines
-  - [ ] /training
-  - [ ] /serving
-  - [ ] /observability
-  - [ ] /ci-cd
-  - [ ] /examples
-- [ ] Add README.md with:
+- [x] Add folder structure:
+- [x] Add README.md with:
   - [ ] Problem → Solution → Business Impact
   - [ ] Quickstart placeholder
   - [ ] Architecture diagram placeholder
@@ -24,29 +13,29 @@ Phase 1: Foundation & Framing [x]
 - [ ] Create `docs/screencast.md` with demo note
 
 Phase 2: Infrastructure Bootstrapping task-list []
-- [ ] Scaffold Terraform modules (local cluster first)
-  - [ ] Create `infra/terraform/main.tf` for AWS
-  - [ ] Define provider, cluster resources, and storage backend (EKS + S3 for DVC)
-  - [ ] Add outputs for kubeconfig and endpoint
+- [x] Scaffold Terraform modules (local cluster first)
+  - [x] Create `infra/terraform/main.tf` for AWS
+  - [x] Define provider, cluster resources, and storage backend (EKS + S3 for DVC)
+  - [x] Add outputs for kubeconfig and endpoint
 
-- [ ] Add Kubernetes manifests 
+- [x] Add Kubernetes manifests 
   - [x] MLflow tracking server
-    - [ ] `infra/k8s/mlflow-deployment.yaml`
-    - [ ] `infra/k8s/mlflow-service.yaml`
-    - [ ] Backend store (PostgreSQL or SQLite)
+    - [x] `infra/k8s/mlflow-deployment.yaml`
+    - [x] `infra/k8s/mlflow-service.yaml`
+    - [x] Backend store (PostgreSQL or SQLite) - backend store-SQLite (PostgreSQL for production)
   - [x] DVC-compatible storage (MinIO or S3)
-    - [ ] `infra/k8s/minio-deployment.yaml`
-    - [ ] `infra/k8s/minio-service.yaml`
+    - [x] `infra/k8s/minio-deployment.yaml`
+    - [x] `infra/k8s/minio-service.yaml`
     - [x] Bucket config for DVC remote - See Readme-k8s.md
 
-- [ ] Set up GitHub Actions for CI/CD
-  - [ ] Create `.github/workflows/deploy.yml`
-  - [ ] Define jobs for Terraform apply + kubectl apply
-  - [ ] Add secrets for cloud provider and kubeconfig
+- [x] Set up GitHub Actions for CI/CD
+  - [x] Create `.github/workflows/deploy.yml`
+  - [x] Define jobs for Terraform apply + kubectl apply
+  - [x] Add secrets for cloud provider and kubeconfig
 
-- [ ] Add CI/CD badge to README
-  - [ ] Status badge for `deploy.yml`
-  - [ ] Link to Actions dashboard
+- [x] Add CI/CD badge to README
+  - [x] Status badge for `deploy.yml`
+  - [x] Link to Actions dashboard
 
 Phase 3: ML Pipeline Core 
 - [ ] Configure MLflow:
