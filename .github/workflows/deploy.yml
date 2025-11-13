@@ -4,6 +4,8 @@ name: Deploy Infrastructure and ML Platform
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'infra/**' #trigger github actions only when something in the /infra folder changes.
 
 jobs:
   deploy:
