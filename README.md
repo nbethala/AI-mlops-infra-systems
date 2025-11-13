@@ -43,7 +43,7 @@ A Modern, cloud-agnostic, end-to-end ML pipeline.
 - Accelerates delivery with CI/CD and monitoring
 
 ## Quickstart
-
+```
 ai-infra-pipeline/
 │
 ├── docs/                  # documentation

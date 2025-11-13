@@ -1,18 +1,16 @@
 # CI/CD Pipeline Overview
 
-Purpose
-This CI/CD pipeline automates the provisioning and deployment of a cloud-native ML Ops platform using:
+The CI/CD pipeline automates the provisioning and deployment of a cloud-native ML Ops platform using:
 
-Terraform for AWS infrastructure (EKS + S3)
+ - Terraform for AWS infrastructure (EKS + S3)
+ - Kubernetes for service orchestration (MLflow, MinIO, Ingress)
+ - GitHub Actions for lifecycle automation
 
-Kubernetes for service orchestration (MLflow, MinIO, Ingress)
-
-GitHub Actions for lifecycle automation
-
-Pipeline Structure
-📁 Workflow File
-bash
+### Pipeline Structure
+Workflow File
+```
 .github/workflows/deploy.yml
+```
 
 ### Trigger 
 Every push to main triggers a full infra + app deployment.
