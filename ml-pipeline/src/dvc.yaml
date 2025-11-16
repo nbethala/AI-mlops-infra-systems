@@ -1,0 +1,15 @@
+stages:
+  ingest:
+    cmd: python src/ingest.py
+    deps: [data/housing.csv]
+    outs: [data/clean.csv]
+
+  train:
+    cmd: python src/train.py
+    deps: [data/clean.csv]
+    outs: [models/model.pkl]
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps: [models/model.pkl, data/clean.csv]
+    metrics: [metrics/metrics.json]
